@@ -1,0 +1,5 @@
+name,username,password,role
+Iris online,iris_web_app,$2a$12$PaFbwnDy9ySNUT89w6GBFOmveeh1.hbBXM7/PrKU/YuIcLn0nejuG,OPERATOR
+Iris mobile,iris_mobile_app,$2a$12$Ssw5tQkjbSWX2//NA3VaCu17S1MumbUP3R.Gd6vly.Go7A9u.BXUW,OPERATOR
+Viva wallet,viva_wallet_app,$2a$12$3kbCXNylB6nhQ2Qz4n5AHeDdJuNeqZu5W2xfv6Obp0DInIkGhOuhG,OPERATOR
+Balance Admin,balance_admin,$2a$12$1XRszEG3TghYSpzhXB3YSOTuDnESGkYcdMu3xV.Hv/VempBZAdslu,ADMIN

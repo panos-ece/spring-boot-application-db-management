@@ -1,0 +1,60 @@
+<configuration>
+    <appender name="OPERATOR_AUDIT"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/operator-audit.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/operator-audit-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%date %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="OPERATOR_AUDIT_LOGGER" level="INFO" additivity="false">
+        <appender-ref ref="OPERATOR_AUDIT"/>
+    </logger>
+
+    <appender name="ADMIN_AUDIT"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/admin-audit.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/admin-audit-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%date %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="ADMIN_AUDIT_LOGGER" level="INFO" additivity="false">
+        <appender-ref ref="ADMIN_AUDIT"/>
+    </logger>
+
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="APP_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/app.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="APP_FILE"/>
+    </root>
+</configuration>
