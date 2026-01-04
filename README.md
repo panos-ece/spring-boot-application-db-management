@@ -13,13 +13,13 @@ Audit logs that tell which operator requested which increment or decrement and w
 Audit logs that tell which admin added or removed an admin or operator and when.
 
 ## Notes
-The [user_balance_init.csv](src/main/resources/user_balance_init.csv) file, represents a dummy user-base and their balance information.
+The [user_balance_init.csv](src/main/resources/data/user_balance_init.csv) file, represents a dummy user-base and their balance information.
 
-The [operators_admins_init.csv](src/main/resources/operators_admins_init.csv) file, represents the credentials and the role level of a particular user. 
+The [operators_admins_init.csv](src/main/resources/data/operators_admins_init.csv) file, represents the credentials and the role level of a particular user. 
 
 These files used for initialization of the storage.
 
 ## How to Run
 You can run this repo by using `./mvnw spring-boot:run` from the parent directory of the repo.
 
-Also, there is a [pwc_postman_collections](pwc_postman_collections)  in order to manual test the functionality in Postman tool.
+Also, there is a [postman_collections](postman_collections)  in order to manual test the functionality in Postman tool.
